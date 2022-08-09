@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID design</title>
+    <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+    <header>
+        <ul class="tabla__header">
+            <li>
+                <figure class="imagen">
+                    <img src="./LOGO.png" alt="Logo UPTC">
+                </figure>
+            </li>
+        </ul>    
+    </header>
+    <section> 
+        <ul> 
+            <li class="principal"> <h1 >Pid design</h1></li>
+        </ul>
+
+        <ul class="l">        
+            <li>       
+                <input  class="lista" list="controladores" id="controlador" placeholder="Elija una opcion"/>
+                    <datalist id="controladores">
+                        <option value="REGULACION A PERTURBACIONES IAE PI"></option>
+                        <option value="REGULACION A PERTURBACIONES ITAE PID"></option>
+                        <option value="PUNTO DE CONTROL, SEGUIMIENTO, IAE PID"></option>
+                        <option value="PUNTO DE CONTROL, SEGUIMIENTO, IAE PI"></option>
+                    </datalist>
+            </li>
+        </ul>  
+        
+        <ul class="principal">
+            <li>        
+                <p class="p__texto" >k = 
+                    <input class="text" type="number" id="input_k" required/>
+                </p>
+            </li>
+            <li>
+                <p class="p__texto" >tao = 
+                    <input class="text" type="number" id="input_tao" required/>
+                </p>
+            </li>
+            <li>
+                <p class="p__texto" >t0 = 
+                    <input class="text" type="number" id="input_t0" required/>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <input class="boton" type="submit" id="boton" value="Calcular"/>
+                </p>
+            </li>
+        </ul>
+        <ul>          
+            <li>
+                <p class="res" id="resultado"></p>    
+            </li>
+        </ul>
+    </section>
+    <script src="pid.js"></script>
+
+
+</body>
+</html>
